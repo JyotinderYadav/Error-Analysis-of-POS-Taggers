@@ -1,0 +1,11 @@
+# Env
+.venv/
+.venv_stable/
+__pycache__/
+*.pyc
+
+# Data
+data/
+
+# OS
+.DS_Store

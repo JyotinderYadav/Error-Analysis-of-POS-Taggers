@@ -1,0 +1,1272 @@
+{
+  "meta": {
+    "dataset": "Universal Dependencies \u2014 English EWT",
+    "train_sentences": 12544,
+    "test_sentences": 2077,
+    "test_tokens": 25094,
+    "taggers": [
+      "NLTK (AvgPerceptron)",
+      "spaCy (en_core_web_sm)",
+      "Stanza (BiLSTM+CRF)",
+      "BERT (HuggingFace)"
+    ]
+  },
+  "taggers": {
+    "NLTK (AvgPerceptron)": {
+      "accuracy": 0.796843867059855,
+      "error_rate": 0.203156132940145,
+      "n_total": 25094,
+      "n_errors": 5098,
+      "per_tag_metrics": {
+        "ADJ": {
+          "precision": 0.8148599269183922,
+          "recall": 0.7483221476510067,
+          "f1": 0.7801749271137025,
+          "support": 1788,
+          "tp": 1338,
+          "fp": 304,
+          "fn": 450
+        },
+        "ADP": {
+          "precision": 0.7722174288179465,
+          "recall": 0.8839506172839506,
+          "f1": 0.8243149896384988,
+          "support": 2025,
+          "tp": 1790,
+          "fp": 528,
+          "fn": 235
+        },
+        "ADV": {
+          "precision": 0.7699680511182109,
+          "recall": 0.8094038623005877,
+          "f1": 0.7891936144085142,
+          "support": 1191,
+          "tp": 964,
+          "fp": 288,
+          "fn": 227
+        },
+        "AUX": {
+          "precision": 0.9925,
+          "recall": 0.2572909915748542,
+          "f1": 0.40864642305712817,
+          "support": 1543,
+          "tp": 397,
+          "fp": 3,
+          "fn": 1146
+        },
+        "CCONJ": {
+          "precision": 0.9945205479452055,
+          "recall": 0.9864130434782609,
+          "f1": 0.990450204638472,
+          "support": 736,
+          "tp": 726,
+          "fp": 4,
+          "fn": 10
+        },
+        "DET": {
+          "precision": 0.9060077519379846,
+          "recall": 0.9857670005271482,
+          "f1": 0.944206008583691,
+          "support": 1897,
+          "tp": 1870,
+          "fp": 194,
+          "fn": 27
+        },
+        "INTJ": {
+          "precision": 1.0,
+          "recall": 0.08264462809917356,
+          "f1": 0.15267175572519084,
+          "support": 121,
+          "tp": 10,
+          "fp": 0,
+          "fn": 111
+        },
+        "NOUN": {
+          "precision": 0.7890257558790593,
+          "recall": 0.8544748969197187,
+          "f1": 0.8204471355379599,
+          "support": 4123,
+          "tp": 3523,
+          "fp": 942,
+          "fn": 600
+        },
+        "NUM": {
+          "precision": 0.9144486692015209,
+          "recall": 0.8874538745387454,
+          "f1": 0.900749063670412,
+          "support": 542,
+          "tp": 481,
+          "fp": 45,
+          "fn": 61
+        },
+        "PART": {
+          "precision": 0.6457399103139013,
+          "recall": 0.6656394453004623,
+          "f1": 0.6555386949924128,
+          "support": 649,
+          "tp": 432,
+          "fp": 237,
+          "fn": 217
+        },
+        "PRON": {
+          "precision": 0.9861878453038674,
+          "recall": 0.8248613678373382,
+          "f1": 0.8983392048314041,
+          "support": 2164,
+          "tp": 1785,
+          "fp": 25,
+          "fn": 379
+        },
+        "PROPN": {
+          "precision": 0.6398628048780488,
+          "recall": 0.809156626506024,
+          "f1": 0.7146201319429667,
+          "support": 2075,
+          "tp": 1679,
+          "fp": 945,
+          "fn": 396
+        },
+        "PUNCT": {
+          "precision": 0.9938200077249904,
+          "recall": 0.8310723514211886,
+          "f1": 0.9051890941073,
+          "support": 3096,
+          "tp": 2573,
+          "fp": 16,
+          "fn": 523
+        },
+        "SCONJ": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 384,
+          "tp": 0,
+          "fp": 0,
+          "fn": 384
+        },
+        "SYM": {
+          "precision": 0.7169811320754716,
+          "recall": 0.336283185840708,
+          "f1": 0.45783132530120485,
+          "support": 113,
+          "tp": 38,
+          "fp": 15,
+          "fn": 75
+        },
+        "VERB": {
+          "precision": 0.6361214704315397,
+          "recall": 0.9166986564299424,
+          "f1": 0.7510614876552916,
+          "support": 2605,
+          "tp": 2388,
+          "fp": 1366,
+          "fn": 217
+        },
+        "X": {
+          "precision": 0.010638297872340425,
+          "recall": 0.047619047619047616,
+          "f1": 0.017391304347826084,
+          "support": 42,
+          "tp": 2,
+          "fp": 186,
+          "fn": 40
+        }
+      },
+      "top_confused_pairs": [
+        [
+          "AUX",
+          "VERB",
+          1121
+        ],
+        [
+          "NOUN",
+          "PROPN",
+          392
+        ],
+        [
+          "SCONJ",
+          "ADP",
+          360
+        ],
+        [
+          "PROPN",
+          "NOUN",
+          307
+        ],
+        [
+          "ADJ",
+          "PROPN",
+          237
+        ],
+        [
+          "ADP",
+          "PART",
+          208
+        ],
+        [
+          "PART",
+          "ADV",
+          200
+        ],
+        [
+          "PUNCT",
+          "X",
+          182
+        ],
+        [
+          "PRON",
+          "DET",
+          165
+        ],
+        [
+          "PUNCT",
+          "NOUN",
+          151
+        ]
+      ],
+      "oov_analysis": {
+        "oov_error_rate": 0.25823591923485656,
+        "iv_error_rate": 0.19869033258659313,
+        "oov_total": 1882,
+        "iv_total": 23212,
+        "oov_errors": 486,
+        "iv_errors": 4612
+      },
+      "frequency_analysis": {
+        "1": {
+          "errors": 603,
+          "total": 2441,
+          "error_rate": 0.24702990577632117
+        },
+        "2\u20135": {
+          "errors": 323,
+          "total": 1382,
+          "error_rate": 0.2337192474674385
+        },
+        "6\u201320": {
+          "errors": 434,
+          "total": 2588,
+          "error_rate": 0.16769706336939721
+        },
+        "21\u2013100": {
+          "errors": 722,
+          "total": 3782,
+          "error_rate": 0.19090428344791116
+        },
+        ">100": {
+          "errors": 3016,
+          "total": 14901,
+          "error_rate": 0.2024025233205825
+        }
+      },
+      "ambiguity_analysis": {
+        "ambiguous_error_rate": 0.2217046125582311,
+        "unambiguous_error_rate": 0.17446463006191007,
+        "ambiguous_total": 15241,
+        "unambiguous_total": 9853
+      },
+      "position_analysis": {
+        "start (0\u201325%)": 0.252112676056338,
+        "early-mid (25\u201350%)": 0.20177050275597128,
+        "late-mid (50\u201375%)": 0.19100779935769996,
+        "end (75\u2013100%)": 0.15563277249451354
+      }
+    },
+    "spaCy (en_core_web_sm)": {
+      "accuracy": 0.9139634972503388,
+      "error_rate": 0.08603650274966124,
+      "n_total": 25094,
+      "n_errors": 2159,
+      "per_tag_metrics": {
+        "ADJ": {
+          "precision": 0.9472693032015066,
+          "recall": 0.8439597315436241,
+          "f1": 0.8926353149955635,
+          "support": 1788,
+          "tp": 1509,
+          "fp": 84,
+          "fn": 279
+        },
+        "ADP": {
+          "precision": 0.8944746376811594,
+          "recall": 0.9753086419753086,
+          "f1": 0.9331443420741791,
+          "support": 2025,
+          "tp": 1975,
+          "fp": 233,
+          "fn": 50
+        },
+        "ADV": {
+          "precision": 0.9352380952380952,
+          "recall": 0.8245172124265323,
+          "f1": 0.8763944667559126,
+          "support": 1191,
+          "tp": 982,
+          "fp": 68,
+          "fn": 209
+        },
+        "AUX": {
+          "precision": 0.8625213918996006,
+          "recall": 0.9799092676604018,
+          "f1": 0.9174757281553397,
+          "support": 1543,
+          "tp": 1512,
+          "fp": 241,
+          "fn": 31
+        },
+        "CCONJ": {
+          "precision": 0.9865047233468286,
+          "recall": 0.9932065217391305,
+          "f1": 0.989844278943805,
+          "support": 736,
+          "tp": 731,
+          "fp": 10,
+          "fn": 5
+        },
+        "DET": {
+          "precision": 0.9270935960591133,
+          "recall": 0.9920927780706379,
+          "f1": 0.9584924879042527,
+          "support": 1897,
+          "tp": 1882,
+          "fp": 148,
+          "fn": 15
+        },
+        "INTJ": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8264462809917356,
+          "f1": 0.8298755186721992,
+          "support": 121,
+          "tp": 100,
+          "fp": 20,
+          "fn": 21
+        },
+        "NOUN": {
+          "precision": 0.9306728063443336,
+          "recall": 0.8823672083434393,
+          "f1": 0.9058764940239045,
+          "support": 4123,
+          "tp": 3638,
+          "fp": 271,
+          "fn": 485
+        },
+        "NUM": {
+          "precision": 0.9416195856873822,
+          "recall": 0.922509225092251,
+          "f1": 0.9319664492078286,
+          "support": 542,
+          "tp": 500,
+          "fp": 31,
+          "fn": 42
+        },
+        "PART": {
+          "precision": 0.9757575757575757,
+          "recall": 0.9922958397534669,
+          "f1": 0.9839572192513368,
+          "support": 649,
+          "tp": 644,
+          "fp": 16,
+          "fn": 5
+        },
+        "PRON": {
+          "precision": 0.9916502946954814,
+          "recall": 0.9329944547134935,
+          "f1": 0.9614285714285714,
+          "support": 2164,
+          "tp": 2019,
+          "fp": 17,
+          "fn": 145
+        },
+        "PROPN": {
+          "precision": 0.7406212182331585,
+          "recall": 0.8848192771084338,
+          "f1": 0.8063241106719368,
+          "support": 2075,
+          "tp": 1836,
+          "fp": 643,
+          "fn": 239
+        },
+        "PUNCT": {
+          "precision": 0.9889070146818923,
+          "recall": 0.9790051679586563,
+          "f1": 0.9839311800032462,
+          "support": 3096,
+          "tp": 3031,
+          "fp": 34,
+          "fn": 65
+        },
+        "SCONJ": {
+          "precision": 0.6686567164179105,
+          "recall": 0.5833333333333334,
+          "f1": 0.6230876216968012,
+          "support": 384,
+          "tp": 224,
+          "fp": 111,
+          "fn": 160
+        },
+        "SYM": {
+          "precision": 0.72,
+          "recall": 0.4778761061946903,
+          "f1": 0.574468085106383,
+          "support": 113,
+          "tp": 54,
+          "fp": 21,
+          "fn": 59
+        },
+        "VERB": {
+          "precision": 0.9414174518639902,
+          "recall": 0.8821497120921306,
+          "f1": 0.9108204518430439,
+          "support": 2605,
+          "tp": 2298,
+          "fp": 143,
+          "fn": 307
+        },
+        "X": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 42,
+          "tp": 0,
+          "fp": 68,
+          "fn": 42
+        }
+      },
+      "top_confused_pairs": [
+        [
+          "NOUN",
+          "PROPN",
+          359
+        ],
+        [
+          "VERB",
+          "AUX",
+          237
+        ],
+        [
+          "ADJ",
+          "PROPN",
+          171
+        ],
+        [
+          "SCONJ",
+          "ADP",
+          152
+        ],
+        [
+          "PROPN",
+          "NOUN",
+          146
+        ],
+        [
+          "PRON",
+          "DET",
+          129
+        ],
+        [
+          "ADV",
+          "SCONJ",
+          92
+        ],
+        [
+          "ADV",
+          "ADP",
+          52
+        ],
+        [
+          "NOUN",
+          "VERB",
+          50
+        ],
+        [
+          "ADJ",
+          "VERB",
+          34
+        ]
+      ],
+      "oov_analysis": {
+        "oov_error_rate": 0.2104144527098831,
+        "iv_error_rate": 0.07595209374461485,
+        "oov_total": 1882,
+        "iv_total": 23212,
+        "oov_errors": 396,
+        "iv_errors": 1763
+      },
+      "frequency_analysis": {
+        "1": {
+          "errors": 472,
+          "total": 2441,
+          "error_rate": 0.19336337566571077
+        },
+        "2\u20135": {
+          "errors": 193,
+          "total": 1382,
+          "error_rate": 0.13965267727930536
+        },
+        "6\u201320": {
+          "errors": 242,
+          "total": 2588,
+          "error_rate": 0.09350850077279753
+        },
+        "21\u2013100": {
+          "errors": 369,
+          "total": 3782,
+          "error_rate": 0.097567424643046
+        },
+        ">100": {
+          "errors": 883,
+          "total": 14901,
+          "error_rate": 0.05925776793503792
+        }
+      },
+      "ambiguity_analysis": {
+        "ambiguous_error_rate": 0.08273735319204777,
+        "unambiguous_error_rate": 0.09113975438952603,
+        "ambiguous_total": 15241,
+        "unambiguous_total": 9853
+      },
+      "position_analysis": {
+        "start (0\u201325%)": 0.09845070422535211,
+        "early-mid (25\u201350%)": 0.08819108067479539,
+        "late-mid (50\u201375%)": 0.0856400061171433,
+        "end (75\u2013100%)": 0.06803218727139722
+      }
+    },
+    "Stanza (BiLSTM+CRF)": {
+      "accuracy": 0.9676815174942217,
+      "error_rate": 0.03231848250577829,
+      "n_total": 25094,
+      "n_errors": 811,
+      "per_tag_metrics": {
+        "ADJ": {
+          "precision": 0.9571428571428572,
+          "recall": 0.9368008948545862,
+          "f1": 0.9468626342566422,
+          "support": 1788,
+          "tp": 1675,
+          "fp": 75,
+          "fn": 113
+        },
+        "ADP": {
+          "precision": 0.9624639076034649,
+          "recall": 0.9876543209876543,
+          "f1": 0.9748964172556666,
+          "support": 2025,
+          "tp": 2000,
+          "fp": 78,
+          "fn": 25
+        },
+        "ADV": {
+          "precision": 0.968944099378882,
+          "recall": 0.9168765743073047,
+          "f1": 0.9421915444348578,
+          "support": 1191,
+          "tp": 1092,
+          "fp": 35,
+          "fn": 99
+        },
+        "AUX": {
+          "precision": 0.9916074887023887,
+          "recall": 0.9954633830200907,
+          "f1": 0.9935316946959897,
+          "support": 1543,
+          "tp": 1536,
+          "fp": 13,
+          "fn": 7
+        },
+        "CCONJ": {
+          "precision": 0.9959128065395095,
+          "recall": 0.9932065217391305,
+          "f1": 0.9945578231292518,
+          "support": 736,
+          "tp": 731,
+          "fp": 3,
+          "fn": 5
+        },
+        "DET": {
+          "precision": 0.9910854745673833,
+          "recall": 0.996309963099631,
+          "f1": 0.9936908517350158,
+          "support": 1897,
+          "tp": 1890,
+          "fp": 17,
+          "fn": 7
+        },
+        "INTJ": {
+          "precision": 0.9083333333333333,
+          "recall": 0.9008264462809917,
+          "f1": 0.904564315352697,
+          "support": 121,
+          "tp": 109,
+          "fp": 11,
+          "fn": 12
+        },
+        "NOUN": {
+          "precision": 0.9467671366067087,
+          "recall": 0.9447004608294931,
+          "f1": 0.9457326696612844,
+          "support": 4123,
+          "tp": 3895,
+          "fp": 219,
+          "fn": 228
+        },
+        "NUM": {
+          "precision": 0.95,
+          "recall": 0.981549815498155,
+          "f1": 0.9655172413793104,
+          "support": 542,
+          "tp": 532,
+          "fp": 28,
+          "fn": 10
+        },
+        "PART": {
+          "precision": 0.9938650306748467,
+          "recall": 0.9984591679506933,
+          "f1": 0.9961568024596463,
+          "support": 649,
+          "tp": 648,
+          "fp": 4,
+          "fn": 1
+        },
+        "PRON": {
+          "precision": 0.9940009229349331,
+          "recall": 0.9953789279112755,
+          "f1": 0.9946894481643963,
+          "support": 2164,
+          "tp": 2154,
+          "fp": 13,
+          "fn": 10
+        },
+        "PROPN": {
+          "precision": 0.9083570750237417,
+          "recall": 0.9219277108433735,
+          "f1": 0.9150920832336763,
+          "support": 2075,
+          "tp": 1913,
+          "fp": 193,
+          "fn": 162
+        },
+        "PUNCT": {
+          "precision": 0.9967553536664504,
+          "recall": 0.9922480620155039,
+          "f1": 0.9944966008416963,
+          "support": 3096,
+          "tp": 3072,
+          "fp": 10,
+          "fn": 24
+        },
+        "SCONJ": {
+          "precision": 0.9728997289972899,
+          "recall": 0.9348958333333334,
+          "f1": 0.9535192563081009,
+          "support": 384,
+          "tp": 359,
+          "fp": 10,
+          "fn": 25
+        },
+        "SYM": {
+          "precision": 0.8031496062992126,
+          "recall": 0.9026548672566371,
+          "f1": 0.85,
+          "support": 113,
+          "tp": 102,
+          "fp": 25,
+          "fn": 11
+        },
+        "VERB": {
+          "precision": 0.9714828897338403,
+          "recall": 0.980806142034549,
+          "f1": 0.9761222540592169,
+          "support": 2605,
+          "tp": 2555,
+          "fp": 75,
+          "fn": 50
+        },
+        "X": {
+          "precision": 0.9090909090909091,
+          "recall": 0.47619047619047616,
+          "f1": 0.6249999999999999,
+          "support": 42,
+          "tp": 20,
+          "fp": 2,
+          "fn": 22
+        }
+      },
+      "top_confused_pairs": [
+        [
+          "NOUN",
+          "PROPN",
+          156
+        ],
+        [
+          "PROPN",
+          "NOUN",
+          132
+        ],
+        [
+          "ADJ",
+          "VERB",
+          46
+        ],
+        [
+          "ADV",
+          "ADP",
+          39
+        ],
+        [
+          "ADV",
+          "ADJ",
+          38
+        ],
+        [
+          "ADJ",
+          "NOUN",
+          34
+        ],
+        [
+          "VERB",
+          "NOUN",
+          28
+        ],
+        [
+          "PUNCT",
+          "SYM",
+          24
+        ],
+        [
+          "NOUN",
+          "NUM",
+          20
+        ],
+        [
+          "NOUN",
+          "VERB",
+          19
+        ]
+      ],
+      "oov_analysis": {
+        "oov_error_rate": 0.10467587672688629,
+        "iv_error_rate": 0.026451835257625365,
+        "oov_total": 1882,
+        "iv_total": 23212,
+        "oov_errors": 197,
+        "iv_errors": 614
+      },
+      "frequency_analysis": {
+        "1": {
+          "errors": 247,
+          "total": 2441,
+          "error_rate": 0.10118803768947153
+        },
+        "2\u20135": {
+          "errors": 116,
+          "total": 1382,
+          "error_rate": 0.08393632416787265
+        },
+        "6\u201320": {
+          "errors": 108,
+          "total": 2588,
+          "error_rate": 0.04173106646058733
+        },
+        "21\u2013100": {
+          "errors": 140,
+          "total": 3782,
+          "error_rate": 0.0370174510840825
+        },
+        ">100": {
+          "errors": 200,
+          "total": 14901,
+          "error_rate": 0.013421917992081069
+        }
+      },
+      "ambiguity_analysis": {
+        "ambiguous_error_rate": 0.027950921855521293,
+        "unambiguous_error_rate": 0.03907439358570994,
+        "ambiguous_total": 15241,
+        "unambiguous_total": 9853
+      },
+      "position_analysis": {
+        "start (0\u201325%)": 0.029859154929577466,
+        "early-mid (25\u201350%)": 0.0337397695005846,
+        "late-mid (50\u201375%)": 0.037008716929194066,
+        "end (75\u2013100%)": 0.02834674469641551
+      }
+    },
+    "BERT (HuggingFace)": {
+      "accuracy": 0.9646130549135251,
+      "error_rate": 0.035386945086474886,
+      "n_total": 25094,
+      "n_errors": 888,
+      "per_tag_metrics": {
+        "ADJ": {
+          "precision": 0.9552941176470588,
+          "recall": 0.9082774049217002,
+          "f1": 0.9311926605504587,
+          "support": 1788,
+          "tp": 1624,
+          "fp": 76,
+          "fn": 164
+        },
+        "ADP": {
+          "precision": 0.974950884086444,
+          "recall": 0.980246913580247,
+          "f1": 0.9775917261758188,
+          "support": 2025,
+          "tp": 1985,
+          "fp": 51,
+          "fn": 40
+        },
+        "ADV": {
+          "precision": 0.9312913907284768,
+          "recall": 0.9445843828715366,
+          "f1": 0.9378907878282617,
+          "support": 1191,
+          "tp": 1125,
+          "fp": 83,
+          "fn": 66
+        },
+        "AUX": {
+          "precision": 0.9966909331568498,
+          "recall": 0.9760207388204796,
+          "f1": 0.9862475442043223,
+          "support": 1543,
+          "tp": 1506,
+          "fp": 5,
+          "fn": 37
+        },
+        "CCONJ": {
+          "precision": 0.997275204359673,
+          "recall": 0.9945652173913043,
+          "f1": 0.9959183673469387,
+          "support": 736,
+          "tp": 732,
+          "fp": 2,
+          "fn": 4
+        },
+        "DET": {
+          "precision": 0.9942135718043135,
+          "recall": 0.996309963099631,
+          "f1": 0.9952606635071091,
+          "support": 1897,
+          "tp": 1890,
+          "fp": 11,
+          "fn": 7
+        },
+        "INTJ": {
+          "precision": 0.9230769230769231,
+          "recall": 0.8925619834710744,
+          "f1": 0.9075630252100841,
+          "support": 121,
+          "tp": 108,
+          "fp": 9,
+          "fn": 13
+        },
+        "NOUN": {
+          "precision": 0.953887011105746,
+          "recall": 0.9582828037836527,
+          "f1": 0.9560798548094375,
+          "support": 4123,
+          "tp": 3951,
+          "fp": 191,
+          "fn": 172
+        },
+        "NUM": {
+          "precision": 0.9568345323741008,
+          "recall": 0.981549815498155,
+          "f1": 0.9690346083788707,
+          "support": 542,
+          "tp": 532,
+          "fp": 24,
+          "fn": 10
+        },
+        "PART": {
+          "precision": 0.9984101748807631,
+          "recall": 0.9676425269645609,
+          "f1": 0.9827856025039123,
+          "support": 649,
+          "tp": 628,
+          "fp": 1,
+          "fn": 21
+        },
+        "PRON": {
+          "precision": 0.9976798143851509,
+          "recall": 0.9935304990757856,
+          "f1": 0.9956008335262793,
+          "support": 2164,
+          "tp": 2150,
+          "fp": 5,
+          "fn": 14
+        },
+        "PROPN": {
+          "precision": 0.9006426099851705,
+          "recall": 0.8780722891566265,
+          "f1": 0.8892142508540752,
+          "support": 2075,
+          "tp": 1822,
+          "fp": 201,
+          "fn": 253
+        },
+        "PUNCT": {
+          "precision": 0.9932432432432432,
+          "recall": 0.997093023255814,
+          "f1": 0.995164410058027,
+          "support": 3096,
+          "tp": 3087,
+          "fp": 21,
+          "fn": 9
+        },
+        "SCONJ": {
+          "precision": 0.9615384615384616,
+          "recall": 0.9765625,
+          "f1": 0.9689922480620154,
+          "support": 384,
+          "tp": 375,
+          "fp": 15,
+          "fn": 9
+        },
+        "SYM": {
+          "precision": 0.9090909090909091,
+          "recall": 0.7964601769911505,
+          "f1": 0.8490566037735849,
+          "support": 113,
+          "tp": 90,
+          "fp": 9,
+          "fn": 23
+        },
+        "VERB": {
+          "precision": 0.9725150602409639,
+          "recall": 0.9915547024952015,
+          "f1": 0.9819425964645505,
+          "support": 2605,
+          "tp": 2583,
+          "fp": 73,
+          "fn": 22
+        },
+        "X": {
+          "precision": 0.13953488372093023,
+          "recall": 0.42857142857142855,
+          "f1": 0.2105263157894737,
+          "support": 42,
+          "tp": 18,
+          "fp": 111,
+          "fn": 24
+        }
+      },
+      "top_confused_pairs": [
+        [
+          "PROPN",
+          "NOUN",
+          129
+        ],
+        [
+          "NOUN",
+          "PROPN",
+          96
+        ],
+        [
+          "ADJ",
+          "PROPN",
+          94
+        ],
+        [
+          "PROPN",
+          "X",
+          94
+        ],
+        [
+          "AUX",
+          "VERB",
+          34
+        ],
+        [
+          "ADV",
+          "ADJ",
+          30
+        ],
+        [
+          "ADP",
+          "ADV",
+          24
+        ],
+        [
+          "ADJ",
+          "NOUN",
+          23
+        ],
+        [
+          "NOUN",
+          "ADJ",
+          21
+        ],
+        [
+          "ADJ",
+          "ADV",
+          19
+        ]
+      ],
+      "oov_analysis": {
+        "oov_error_rate": 0.14718384697130713,
+        "iv_error_rate": 0.026322591762881268,
+        "oov_total": 1882,
+        "iv_total": 23212,
+        "oov_errors": 277,
+        "iv_errors": 611
+      },
+      "frequency_analysis": {
+        "1": {
+          "errors": 314,
+          "total": 2441,
+          "error_rate": 0.12863580499795166
+        },
+        "2\u20135": {
+          "errors": 61,
+          "total": 1382,
+          "error_rate": 0.04413892908827786
+        },
+        "6\u201320": {
+          "errors": 116,
+          "total": 2588,
+          "error_rate": 0.04482225656877898
+        },
+        "21\u2013100": {
+          "errors": 172,
+          "total": 3782,
+          "error_rate": 0.04547858276044421
+        },
+        ">100": {
+          "errors": 225,
+          "total": 14901,
+          "error_rate": 0.015099657741091201
+        }
+      },
+      "ambiguity_analysis": {
+        "ambiguous_error_rate": 0.02821337182599567,
+        "unambiguous_error_rate": 0.046483304577286104,
+        "ambiguous_total": 15241,
+        "unambiguous_total": 9853
+      },
+      "position_analysis": {
+        "start (0\u201325%)": 0.03323943661971831,
+        "early-mid (25\u201350%)": 0.03674628361449808,
+        "late-mid (50\u201375%)": 0.038079217005658354,
+        "end (75\u2013100%)": 0.03346744696415509
+      }
+    }
+  },
+  "cross_tagger": {
+    "ensemble_accuracy": 0.9389495496931537,
+    "ensemble_error_rate": 0.061050450306846304,
+    "n_hard_cases": 216,
+    "hard_case_sample": [
+      {
+        "index": 26,
+        "gold": "ADJ",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "VERB",
+          "spaCy (en_core_web_sm)": "VERB",
+          "Stanza (BiLSTM+CRF)": "VERB",
+          "BERT (HuggingFace)": "VERB"
+        },
+        "word": "fledged"
+      },
+      {
+        "index": 112,
+        "gold": "PROPN",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "NOUN",
+          "spaCy (en_core_web_sm)": "NOUN",
+          "Stanza (BiLSTM+CRF)": "NOUN",
+          "BERT (HuggingFace)": "NOUN"
+        },
+        "word": "blogger"
+      },
+      {
+        "index": 247,
+        "gold": "AUX",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "PRON",
+          "spaCy (en_core_web_sm)": "PRON",
+          "Stanza (BiLSTM+CRF)": "PRON",
+          "BERT (HuggingFace)": "PRON"
+        },
+        "word": "my"
+      },
+      {
+        "index": 490,
+        "gold": "ADJ",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "PROPN",
+          "spaCy (en_core_web_sm)": "PROPN",
+          "Stanza (BiLSTM+CRF)": "VERB",
+          "BERT (HuggingFace)": "PROPN"
+        },
+        "word": "United"
+      },
+      {
+        "index": 930,
+        "gold": "NUM",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "PROPN",
+          "spaCy (en_core_web_sm)": "PROPN",
+          "Stanza (BiLSTM+CRF)": "PROPN",
+          "BERT (HuggingFace)": "NOUN"
+        },
+        "word": "VI"
+      },
+      {
+        "index": 936,
+        "gold": "NUM",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "PROPN",
+          "spaCy (en_core_web_sm)": "PROPN",
+          "Stanza (BiLSTM+CRF)": "PROPN",
+          "BERT (HuggingFace)": "NOUN"
+        },
+        "word": "VI"
+      },
+      {
+        "index": 982,
+        "gold": "NOUN",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "PROPN",
+          "spaCy (en_core_web_sm)": "PROPN",
+          "Stanza (BiLSTM+CRF)": "PROPN",
+          "BERT (HuggingFace)": "PROPN"
+        },
+        "word": "BREYER"
+      },
+      {
+        "index": 1304,
+        "gold": "ADJ",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "PROPN",
+          "spaCy (en_core_web_sm)": "PROPN",
+          "Stanza (BiLSTM+CRF)": "PROPN",
+          "BERT (HuggingFace)": "PROPN"
+        },
+        "word": "General"
+      },
+      {
+        "index": 1384,
+        "gold": "ADV",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "ADJ",
+          "spaCy (en_core_web_sm)": "VERB",
+          "Stanza (BiLSTM+CRF)": "VERB",
+          "BERT (HuggingFace)": "VERB"
+        },
+        "word": "hear"
+      },
+      {
+        "index": 1646,
+        "gold": "INTJ",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "NOUN",
+          "spaCy (en_core_web_sm)": "PROPN",
+          "Stanza (BiLSTM+CRF)": "PRON",
+          "BERT (HuggingFace)": "X"
+        },
+        "word": "em"
+      },
+      {
+        "index": 1696,
+        "gold": "ADP",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "ADV",
+          "spaCy (en_core_web_sm)": "ADV",
+          "Stanza (BiLSTM+CRF)": "ADV",
+          "BERT (HuggingFace)": "ADV"
+        },
+        "word": "away"
+      },
+      {
+        "index": 1944,
+        "gold": "ADJ",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "PROPN",
+          "spaCy (en_core_web_sm)": "PROPN",
+          "Stanza (BiLSTM+CRF)": "VERB",
+          "BERT (HuggingFace)": "PROPN"
+        },
+        "word": "United"
+      },
+      {
+        "index": 2100,
+        "gold": "PRON",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "PROPN",
+          "spaCy (en_core_web_sm)": "NOUN",
+          "Stanza (BiLSTM+CRF)": "INTJ",
+          "BERT (HuggingFace)": "PROPN"
+        },
+        "word": "Wtf"
+      },
+      {
+        "index": 2916,
+        "gold": "ADJ",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "VERB",
+          "spaCy (en_core_web_sm)": "VERB",
+          "Stanza (BiLSTM+CRF)": "VERB",
+          "BERT (HuggingFace)": "VERB"
+        },
+        "word": "confused"
+      },
+      {
+        "index": 3248,
+        "gold": "ADV",
+        "predictions": {
+          "NLTK (AvgPerceptron)": "ADP",
+          "spaCy (en_core_web_sm)": "ADP",
+          "Stanza (BiLSTM+CRF)": "ADP",
+          "BERT (HuggingFace)": "ADP"
+        },
+        "word": "up"
+      }
+    ],
+    "error_category_breakdown": {
+      "all_correct": 19025,
+      "only_one_wrong": 4147,
+      "majority_wrong": 1706,
+      "all_wrong": 216
+    },
+    "pairwise_agreement": {
+      "NLTK (AvgPerceptron)_vs_spaCy (en_core_web_sm)": 0.818,
+      "NLTK (AvgPerceptron)_vs_Stanza (BiLSTM+CRF)": 0.807,
+      "NLTK (AvgPerceptron)_vs_BERT (HuggingFace)": 0.7963,
+      "spaCy (en_core_web_sm)_vs_Stanza (BiLSTM+CRF)": 0.9237,
+      "spaCy (en_core_web_sm)_vs_BERT (HuggingFace)": 0.913,
+      "Stanza (BiLSTM+CRF)_vs_BERT (HuggingFace)": 0.9564
+    },
+    "error_taxonomy": {
+      "NLTK (AvgPerceptron)": {
+        "Lexical_Ambiguity": 2919,
+        "OOV": 486,
+        "Punctuation": 500,
+        "Other": 970,
+        "Proper_Noun": 223
+      },
+      "spaCy (en_core_web_sm)": {
+        "OOV": 396,
+        "Other": 407,
+        "Lexical_Ambiguity": 1184,
+        "Proper_Noun": 110,
+        "Punctuation": 62
+      },
+      "Stanza (BiLSTM+CRF)": {
+        "Lexical_Ambiguity": 358,
+        "OOV": 197,
+        "Other": 128,
+        "Proper_Noun": 105,
+        "Punctuation": 23
+      },
+      "BERT (HuggingFace)": {
+        "Lexical_Ambiguity": 363,
+        "OOV": 277,
+        "Other": 134,
+        "Proper_Noun": 107,
+        "Punctuation": 7
+      }
+    }
+  }
+}

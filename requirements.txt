@@ -1,0 +1,34 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# requirements.txt
+# Error Analysis of POS Taggers — NLP Course Project
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Core data & ML
+numpy>=1.24
+scipy>=1.10
+
+# Visualization
+matplotlib>=3.7
+seaborn>=0.12
+
+# ── POS Taggers ───────────────────────────────────────────────────────────────
+
+# 1. NLTK (Averaged Perceptron)
+nltk>=3.8
+
+# 2. spaCy (CNN-based)
+spacy>=3.6
+# After installing spaCy, download the English model:
+#   python -m spacy download en_core_web_sm
+
+# 3. Stanford Stanza (BiLSTM + CRF)
+stanza>=1.7
+
+# 4. HuggingFace Transformers (BERT-based)
+transformers>=4.35
+torch>=2.0           # CPU-only is fine for this project
+# accelerate>=0.24   # optional: speeds up HF inference
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+tqdm>=4.65
+requests>=2.31
