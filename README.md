@@ -141,7 +141,7 @@ Splits (approximate):
 
 ---
 
-## References
+# References
 
 See `report/survey_report.docx` for full bibliography.  
 Key papers:
