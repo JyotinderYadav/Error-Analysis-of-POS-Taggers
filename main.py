@@ -43,6 +43,7 @@ from typing import List, Dict, Optional
 # ── Project modules ───────────────────────────────────────────────────────────
 from data_loader import (
     load_ud_dataset,
+    parse_conllu,
     flatten_sentences,
     build_vocab_stats,
     dataset_statistics,
@@ -156,6 +157,8 @@ def main():
                         help='Download UD English EWT data before running')
     parser.add_argument('--skip-hf',        action='store_true',
                         help='Skip HuggingFace tagger (saves time / memory)')
+    parser.add_argument('--test-file',      default=None,
+                        help='Override test split with a custom CoNLL-U dataset')
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)
@@ -177,7 +180,12 @@ def main():
         sys.exit(1)
 
     train_sents = splits.get('train', [])
-    test_sents  = splits.get('test',  splits.get('dev', []))
+
+    if args.test_file and os.path.exists(args.test_file):
+        print(f"  [Override] Using custom test file: {args.test_file}")
+        test_sents = parse_conllu(args.test_file)
+    else:
+        test_sents  = splits.get('test',  splits.get('dev', []))
 
     if args.max_sentences:
         test_sents = test_sents[:args.max_sentences]

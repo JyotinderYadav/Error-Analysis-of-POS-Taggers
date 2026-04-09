@@ -15,6 +15,8 @@ All taggers expose the same interface:
 """
 
 import abc
+import os
+import json
 from typing import List, Dict
 from collections import Counter
 
@@ -274,6 +276,75 @@ class HuggingFaceTagger(BaseTagger):
 
 
 # ──────────────────────────────────────────────────────────────────────────────
+# 5. Grok xAI Zero-Shot Tagger
+# ──────────────────────────────────────────────────────────────────────────────
+
+class GrokTagger(BaseTagger):
+    """
+    xAI Grok zero-shot POS tagger.
+    Prompts the LLM with words and requests UPOS JSON array output.
+    """
+    def __init__(self, model_name: str = 'grok-beta'):
+        self.api_key = os.getenv("GROK_API_KEY")
+        self._model_name = model_name
+        self.endpoint = "https://api.x.ai/v1/chat/completions"
+        if not self.api_key:
+            raise ValueError("GROK_API_KEY environment variable not set")
+
+    @property
+    def name(self) -> str:
+        return f"Grok ({self._model_name})"
+
+    def tag_sentence(self, words: List[str]) -> List[str]:
+        if not words:
+            return []
+            
+        try:
+            import requests
+        except ImportError:
+            print("    [Grok API Error] Please install 'requests' library (pip install requests).")
+            return ['X'] * len(words)
+        
+        prompt = f"You are a UPOS tagger. Given a list of {len(words)} English words, output a JSON array of strings containing exactly {len(words)} UPOS tags ordered correspondingly. Do not explain, just return the JSON array.\nWords: {json.dumps(words)}"
+        
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json"
+        }
+        data = {
+            "model": self._model_name,
+            "messages": [
+                {"role": "system", "content": "You are a specialized NLP tagger returning raw JSON arrays. Adhere perfectly to UPOS tags."},
+                {"role": "user", "content": prompt}
+            ],
+            "temperature": 0.0
+        }
+        
+        try:
+            resp = requests.post(self.endpoint, headers=headers, json=data, timeout=15)
+            resp.raise_for_status()
+            content = resp.json()['choices'][0]['message']['content'].strip()
+            
+            import re
+            match = re.search(r'\[.*\]', content, re.DOTALL)
+            if match:
+                content = match.group(0)
+            
+            tags = json.loads(content)
+            if not isinstance(tags, list):
+                tags = ['X'] * len(words)
+                
+            tags = [t if t in UPOS_TAGS else PTB_TO_UPOS.get(t, 'X') for t in tags]
+            return self._ensure_length(tags, len(words))
+            
+        except Exception as e:
+            print(f"    [Grok API Error] {e}")
+            if 'content' in locals():
+                print(f"    [Grok Content] {content[:200]}")
+            return ['X'] * len(words)
+
+
+# ──────────────────────────────────────────────────────────────────────────────
 # Factory
 # ──────────────────────────────────────────────────────────────────────────────
 
@@ -288,6 +359,7 @@ def get_available_taggers() -> Dict[str, BaseTagger]:
         ('spacy',       SpacyTagger),
         ('stanza',      StanzaTagger),
         ('huggingface', HuggingFaceTagger),
+        ('grok',        GrokTagger),
     ]
 
     taggers: Dict[str, BaseTagger] = {}
